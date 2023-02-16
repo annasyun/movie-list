@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.app {
+  max-width: 1060px;
+  height: 1170px;
+  margin: 86px auto 135px;
+  background-color: #bdbdbd;
+  border: 2px solid #bdbdbd;
+  border-radius: 15px;
+}
+
+/* header */
+
+.tit-app {
+  padding: 41px 205px 28px;
+  background-color: antiquewhite;
+}
+
+.txt-tit {
+  font-size: 24px;
+  text-align: center;
+  padding-bottom: 37px;
+  border-bottom: 2px solid #bdbdbd;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+.list-tit {
+  display: flex;
+  justify-content: space-around;
+  margin: 28px auto 0;
+  max-width: 372px;
+  height: 19px;
+}
+
+.screening-movie {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.to-release-movie,
+.box-office-movie {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #828282;
+}
