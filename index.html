@@ -5,59 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>영화목록</title>
+    <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <main>
-      <header>
-        <h1></h1>
-        <nav>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+    <main class="app">
+      <header class="tit-app">
+        <h1>정글 시네마 영화 목록</h1>
+        <nav class="nav-tit">
+          <ul class="list-tit">
+            <li>현재상영영화</li>
+            <li>개봉예정영화</li>
+            <li>박스오피스</li>
           </ul>
         </nav>
       </header>
-      <ul>
+      <ul class="list-movie">
         <li>
           <div>
-            <img src="" alt="" />
-            <h2></h2>
-            <span></span>
-            <p></p>
-            <span></span>
-            <p></p>
-            <span></span>
-            <p></p>
-            <span></span>
-            <p></p>
+            <img class="img-movie" src="" alt="" />
+            <h2 class="tit-movie">위니브 월드 : 새로운 시대</h2>
+            <span class="genre-movie">개요</span>
+            <p class="txt-genre">판타지</p>
+            <span class="grade-movie">평점</span>
+            <p class="txt-grade">
+              <img class="img-grade" src="" alt="" />
+              9.05
+            </p>
+            <span class="release-date-movie">개봉</span>
+            <p class="txt-release-date">2021.03.27</p>
+            <span class="characters-movie">출연</span>
+            <p class="txt-characters">라이캣,소울곰,개리씨</p>
           </div>
-          <strong></strong><strong></strong>
+          <strong>예매하기</strong>
+          <strong>
+            <img class="img-play-button" src="" alt="" />
+            예고편
+          </strong>
         </li>
       </ul>
     </main>
     <footer>
-      <h2></h2>
-      <ul>
-        <li><img src="" alt="" /></li>
-        <li><img src="" alt="" /></li>
-        <li><img src="" alt="" /></li>
+      <h2 class="tit-company"></h2>
+      <ul class="list-sns">
+        <li><img class="img-sns" src="" alt="" /></li>
+        <li><img class="img-sns" src="" alt="" /></li>
+        <li><img class="img-sns" src="" alt="" /></li>
       </ul>
-      <address>
-        <dl>
-          <dt></dt>
-          <dt></dt>
-          <dd></dd>
+      <address class="info-company">
+        <dl class="list-info">
+          <dt class="name-company"></dt>
+          <dt class="ceo-company"></dt>
+          <dd class="txt-ceo"></dd>
 
-          <dt></dt>
-          <dd></dd>
+          <dt class="business-number-company"></dt>
+          <dd class="txt-business-number"></dd>
 
-          <dd></dd>
-          <dt></dt>
-          <dd></dd>
+          <dd class="txt-sectors"></dd>
+          <dt class="address-company"></dt>
+          <dd class="txt-company"></dd>
         </dl>
-        <strong></strong>
+        <p>&copy;</p>
       </address>
     </footer>
   </body>
