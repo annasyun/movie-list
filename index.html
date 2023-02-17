@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>영화목록</title>
+    <title>Jungle Cinema</title>
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,64 +17,87 @@
     />
   </head>
   <body>
+    <h1>정글 시네마</h1>
     <main class="app">
       <header class="tit-app">
-        <h1 class="txt-tit">정글 시네마 영화 목록</h1>
+        <h2 class="txt-tit">정글 시네마 영화 목록</h2>
         <nav class="nav-tit">
           <ul class="list-tit">
-            <li class="screening-movie">현재상영영화</li>
-            <li class="to-release-movie">개봉예정영화</li>
-            <li class="box-office-movie">박스오피스</li>
+            <li class="screening-movie"><a href="#none">현재상영영화</a></li>
+            <li class="to-release-movie"><a href="#none">개봉예정영화</a></li>
+            <li class="box-office-movie"><a href="#none">박스오피스</a></li>
           </ul>
         </nav>
       </header>
-      <ul class="list-movie">
-        <li>
-          <div>
-            <img class="img-movie" src="" alt="" />
-            <h2 class="tit-movie">위니브 월드 : 새로운 시대</h2>
-            <span class="genre-movie">개요</span>
-            <p class="txt-genre">판타지</p>
-            <span class="grade-movie">평점</span>
-            <p class="txt-grade">
-              <img class="img-grade" src="" alt="" />
-              9.05
-            </p>
-            <span class="release-date-movie">개봉</span>
-            <p class="txt-release-date">2021.03.27</p>
-            <span class="characters-movie">출연</span>
-            <p class="txt-characters">라이캣,소울곰,개리씨</p>
-          </div>
-          <strong>예매하기</strong>
-          <strong>
-            <img class="img-play-button" src="" alt="" />
-            예고편
-          </strong>
-        </li>
-      </ul>
+
+      <section>
+        <h3>현재 상영 영화 목록</h3>
+        <ul class="list-movie">
+          <li class="unit-movie">
+            <div class="cont-info-movie">
+              <a href="#none">
+                <img
+                  class="img-movie"
+                  src="./src/포스터_위니브월드.png"
+                  alt="위니브 월드 : 새로운 시대의 포스터 이미지"
+                />
+              </a>
+              <strong class="tit-movie">위니브 월드 : 새로운 시대</ㄴ>
+              <dl class="info-movie">
+                <div>
+                  <dt class="genre-movie">개요</dt>
+                  <dd class="txt-genre">판타지</dd>
+                </div>
+                <div>
+                  <dt class="grade-movie">평점</dt>
+                  <dd class="txt-grade">9.05</dd>
+                </div>
+                <div>
+                  <dt class="release-date-movie">개봉</dt>
+                  <dd class="txt-release-date">2021.03.27</dd>
+                </div>
+                <div>
+                  <dt  class="characters-movie" >출연</dt>
+                  <dd class="txt-characters">라이캣,소울곰,개리씨</dd>
+                </div>
+              </dl>
+            </div>
+
+              <a href="#none" class="btn-reserve">예매하기</a>
+              <a href="#none" class="btn-play-preview">
+                예고편
+              </a>
+          </li>
+        </ul>
+      </section>
     </main>
     <footer>
-      <h2 class="tit-company"></h2>
-      <ul class="list-sns">
-        <li><img class="img-sns" src="" alt="" /></li>
-        <li><img class="img-sns" src="" alt="" /></li>
-        <li><img class="img-sns" src="" alt="" /></li>
-      </ul>
-      <address class="info-company">
-        <dl class="list-info">
-          <dt class="name-company"></dt>
-          <dt class="ceo-company"></dt>
-          <dd class="txt-ceo"></dd>
+      <section class="cont-company-info">
+        <h2>기업 정보</h2>
+        <strong class="txt-company-name">Jungle Cinema</strong>
+        <address class="company-info">
+          <dl class="list-company-info">
+            <dt>사명</dt>
+            <dd class="name-company">(주) 정글 시네마</dd>
+            <dt class="ceo-company">대표</dt>
+            <dd class="txt-ceo">라이캣</dd>
 
-          <dt class="business-number-company"></dt>
-          <dd class="txt-business-number"></dd>
+            <dt class="business-number-company">사업자 번호</dt>
+            <dd class="txt-business-number">000-0000-0000</dd>
 
-          <dd class="txt-sectors"></dd>
-          <dt class="address-company"></dt>
-          <dd class="txt-company"></dd>
-        </dl>
-        <p>&copy;</p>
-      </address>
+            <dd class="txt-sectors">광고 영화 및 비디오물 제작업</dd>
+            <dt class="address-company">주소</dt>
+            <dd class="txt-company">서울특별시</dd>
+          </dl>
+        </address>
+        <em>sns 링크 목록</em>
+        <ul class="list-sns">
+          <li><a href="#none">트위터</a></li>
+          <li><a href="#none">인스타그램</a></li>
+          <li><a href="#none">페이스북</a></li>
+        </ul>
+        <small>Copyright &copy;The Jungle. All rights Reserved.</small>
+      </section>
     </footer>
   </body>
 </html>

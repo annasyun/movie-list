@@ -1,13 +1,15 @@
 * {
   box-sizing: border-box;
   font-family: "Noto Sans KR", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
 }
 
 .app {
   max-width: 1060px;
   height: 1170px;
   margin: 86px auto 135px;
-  background-color: #bdbdbd;
+  background-color: #f2f2f2;
   border: 2px solid #bdbdbd;
   border-radius: 15px;
 }
@@ -16,7 +18,6 @@
 
 .tit-app {
   padding: 41px 205px 28px;
-  background-color: antiquewhite;
 }
 
 .txt-tit {
@@ -48,4 +49,127 @@
   font-weight: 500;
   font-size: 16px;
   color: #828282;
+}
+
+.list-movie {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  border: 2px solid #bdbdbd;
+  border-radius: 15px;
+  margin: 0 28px 31px 29px;
+  padding: 26px 27px 30px;
+  gap: 24px 23px;
+}
+
+.list-movie > li {
+  width: 218px;
+  height: 441px;
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
+}
+
+.cont-info-movie {
+  padding: 19px 20px 18px;
+}
+
+.img-movie {
+  width: 180px;
+  height: 250px;
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
+}
+
+.tit-movie {
+  font-weight: 900;
+  margin-top: 11px;
+  font-size: 16px;
+}
+
+/* movie-info */
+
+.info-movie {
+  margin-top: 12px;
+  position: relative;
+}
+
+.info-movie li {
+  margin-bottom: 5px;
+  color: #828282;
+}
+
+.info-movie li span {
+  color: black;
+}
+
+.genre-movie,
+.grade-movie {
+  display: inline-block;
+}
+
+.grade-movie {
+  position: absolute;
+  right: 0;
+}
+
+.img-grade {
+  vertical-align: top;
+}
+
+.cont-btn {
+  width: 100%;
+  height: 41px;
+  background-color: #bdbdbd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.cont-btn button {
+  background-color: #f2f2f2;
+  display: block;
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-reserve {
+  border-right: 1px solid black;
+}
+
+.img-play-button {
+  width: 16px;
+}
+
+/* footer */
+footer {
+  height: 213px;
+  background-color: #f2f2f2;
+}
+
+.cont-footer {
+  width: 1189px;
+  margin: 0 auto;
+}
+
+.tit-company {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  padding-top: 53px;
+  padding-bottom: 42px;
+  display: inline-block;
+}
+.list-sns {
+  display: flex;
+}
+
+.img-sns {
+  width: 24px;
+  margin-left: 21px;
+}
+
+.info-company {
+  border-top: 1px solid #c4c4c4;
 }
