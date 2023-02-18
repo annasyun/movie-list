@@ -1,175 +1,194 @@
-* {
-  box-sizing: border-box;
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 13px;
-  font-weight: 400;
+@charset "utf-8";
+
+/* 유틸리티 */
+
+/* 스크린 리더 전용 */
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
-.app {
-  max-width: 1060px;
-  height: 1170px;
-  margin: 86px auto 135px;
-  background-color: #f2f2f2;
+/* 한줄 말줄임 */
+.sl-ellipsis {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 두줄 말줄임 */
+.multi-ellipsis {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* 컨테이너 스타일 */
+.cont-movie {
+  width: 1060px;
+  margin: 86px auto 0;
+  padding: 0 27px 29px;
   border: 2px solid #bdbdbd;
   border-radius: 15px;
+  background-color: #e5e5e5;
 }
 
-/* header */
-
-.tit-app {
-  padding: 41px 205px 28px;
-}
-
-.txt-tit {
+.cont-movie .tit-cont {
   font-size: 24px;
   text-align: center;
-  padding-bottom: 37px;
-  border-bottom: 2px solid #bdbdbd;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
+  line-height: 28px;
+  padding: 38px 0;
 }
 
-.list-tit {
-  display: flex;
-  justify-content: space-around;
-  margin: 28px auto 0;
-  max-width: 372px;
-  height: 19px;
+/* nav 스타일 */
+.cont-movie .nav-movie {
+  text-align: center;
 }
 
-.screening-movie {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-size: 16px;
+.cont-movie .nav-movie::before {
+  display: block;
+  content: "";
+  width: 650px;
+  height: 2px;
+  background-color: #bdbdbd;
+  margin: 0 auto;
 }
 
-.to-release-movie,
-.box-office-movie {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
+.cont-movie .list-movie-nav {
+  display: inline-block;
+  margin: 27px 0;
+}
+
+.cont-movie .list-movie-nav li {
+  float: left;
+}
+
+.cont-movie .list-movie-nav li + li {
+  margin-left: 60px;
+}
+
+.cont-movie .list-movie-nav .link-nav {
   color: #828282;
 }
 
-.list-movie {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #ffffff;
+.cont-movie .list-movie-nav .on .link-nav {
+  color: #000;
+  font-weight: bold;
+}
+
+.cont-movie .list-movie-info {
+  overflow: hidden;
+  padding: 0 12px 24px 12px;
   border: 2px solid #bdbdbd;
   border-radius: 15px;
-  margin: 0 28px 31px 29px;
-  padding: 26px 27px 30px;
-  gap: 24px 23px;
+  background-color: #fff;
 }
 
-.list-movie > li {
-  width: 218px;
-  height: 441px;
+.cont-movie .list-movie-info .tit-movie {
+  font-weight: bold;
+  line-height: 23px;
+}
+
+.cont-movie .list-movie-info li {
+  overflow: hidden;
+  float: left;
   border: 1px solid #bdbdbd;
   border-radius: 10px;
-}
-
-.cont-info-movie {
-  padding: 19px 20px 18px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  margin: 24px 12px 0;
 }
 
 .img-movie {
   width: 180px;
   height: 250px;
-  border: 1px solid #bdbdbd;
-  border-radius: 10px;
 }
 
-.tit-movie {
-  font-weight: 900;
-  margin-top: 11px;
-  font-size: 16px;
+.link-reserve,
+.link-preview {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  height: 41px;
+  line-height: 41px;
+  background-color: #f2f2f2;
+  border-top: 1px solid #bdbdbd;
 }
 
-/* movie-info */
+.link-reserve::after {
+  display: inline-block;
+  float: right;
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: #bdbdbd;
+}
 
-.info-movie {
+.cont-movie .list-movie-info li .link-preview::before {
+  display: inline-block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url(../images/아이콘_재생.png) no-repeat center;
+  vertical-align: top;
+  margin: 11px 2px 0 0;
+}
+
+.link-movie {
+  display: block;
+  margin-bottom: 11px;
+}
+
+.list-movie-info .list-info {
   margin-top: 12px;
-  position: relative;
 }
 
-.info-movie li {
-  margin-bottom: 5px;
+.list-movie-info .cont-info-movie {
+  width: 180px;
+  padding: 19px 19px 0 19px;
+}
+
+.list-movie-info .list-info dt,
+.list-movie-info .list-info dd {
+  display: inline-block;
+  font-size: 13px;
+  vertical-align: top;
+  line-height: 1.2;
+}
+
+.list-movie-info .list-info dt {
+  font-weight: lighter;
   color: #828282;
 }
 
-.info-movie li span {
-  color: black;
+.list-movie-info .list-info .multi-ellipsis {
+  width: 140px;
+  height: 28px;
+  float: right;
+  display: -webkit-box;
+  margin-left: 5px;
 }
 
-.genre-movie,
-.grade-movie {
+.item-star {
+  float: right;
+}
+
+.item-star dt::after {
   display: inline-block;
-}
-
-.grade-movie {
-  position: absolute;
-  right: 0;
-}
-
-.img-grade {
+  content: "";
+  width: 14px;
+  height: 13px;
+  margin-left: 5px;
+  background: url(../images/별점이미지.png);
   vertical-align: top;
+  margin-bottom: 5px;
 }
 
-.cont-btn {
-  width: 100%;
-  height: 41px;
-  background-color: #bdbdbd;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
-
-.cont-btn button {
-  background-color: #f2f2f2;
-  display: block;
-  font-size: 14px;
-  width: 100%;
-  height: 100%;
-}
-
-.btn-reserve {
-  border-right: 1px solid black;
-}
-
-.img-play-button {
-  width: 16px;
-}
-
-/* footer */
-footer {
-  height: 213px;
-  background-color: #f2f2f2;
-}
-
-.cont-footer {
-  width: 1189px;
-  margin: 0 auto;
-}
-
-.tit-company {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 22px;
-  padding-top: 53px;
-  padding-bottom: 42px;
+.list-movie-info .list-info div {
   display: inline-block;
-}
-.list-sns {
-  display: flex;
-}
-
-.img-sns {
-  width: 24px;
-  margin-left: 21px;
-}
-
-.info-company {
-  border-top: 1px solid #c4c4c4;
+  margin-bottom: 5px;
 }
